@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы языка HTML</title>
+    <link rel="stylesheet" href="../CSS/Основы языка HTML.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="1.1 Введение.html">1</a>
+        <a href="1.2 Браузер и редактор.html">2</a>
+        <a href="1.3 Первые HTML теги.html">3</a>
+        <a href="1.4 Путь к файлу.html">4</a>
+        <a href="1.5 Списки и ссылки.html">5</a>
+        <a href="1.6 Таблицы.html">6</a>
+        <a href="1.7 Работа с текстом.html">7</a>
+        <a href="1.8 Формы.html">8</a>
+        <a href="1.9 Атрибуты тегов.html">9</a>
+        <a href="1.10 Цвет RGB и символы.html">10</a>
+        <a href="1.11 Тест по HTML, Часть 1.html">11</a>
+        <a href="1.12 Итоги модуля.html">12</a>
+
+        <h1>1.3 Первые HTML теги</h1>
+
+        <p>В этом уроке вы выучите свои первые HTML теги.</p>
+        <p><strong>Вёрстка сайта</strong> - это процесс написания кода на HTML и CSS. Результатом этого процесса
+            становится веб-страница. <br>
+
+            На языке HTML есть много разных тегов. Это слова записанные в треугольных скобках. Ниже вы видите несколько
+            тегов,
+            которые вы изучите в самом начале. Каждый такой тег имеет свое предназначение. Далее мы будем изучать новые
+            теги,
+            которые позволят нам добавлять: картинки, ссылки, списки, таблицы, формы и многое другое на нашу страницу.
+        </p>
+        <h2>1.<strong><code> &lt;<span class="span">html</span>&gt; </code></strong></h2>
+        <li> <strong>Для чего нужен:</strong> Это корневой тег, который указывает, что документ является
+            HTML-документом.</li><br>
+
+        <li><strong>Пример:</strong></li> <br>
+        <div class="ramka">
+            <code>&lt;html&gt; <br>
+            &lt;!-- содержимое документа --&gt; <br>
+            &lt;/html&gt; <br>
+            </code>
+        </div>
+
+        <h2>2.<strong><code> &lt;<span class="span">head</span>&gt; </code></strong></h2>
+        <li> <strong>Для чего нужен:</strong> Содержит метаинформацию о документе, которая не отображается на странице,
+            но важна для браузера и поисковых систем.</li>
+        <br>
+        <li><strong>Пример:</strong> </li><br>
+        <div class="ramka">
+            <code>&lt;head&gt; </code><br>
+            <code>&lt;title&gt; </code> Заголовок страницы<code>&lt;/title&gt; </code><br>
+            <code>&lt;meta charset="UTF-8"&gt; </code><br>
+            <code>&lt;link rel="stylesheet" href="styles.css"&gt; </code><br>
+            <code>&lt;/head&gt; </code><br>
+        </div>
+
+        <h2>3.<strong><code> &lt;<span class="span">meta</span>&gt; </code></strong></h2>
+
+        <li> <strong>Для чего нужен:</strong> Используется для хранения метаданных, таких как кодировка, описание
+            страницы, ключевые слова и другие настройки.</li><br>
+        <li><strong>Пример:</strong> </li><br>
+        <div class="ramka">
+            <code>&lt;meta charset="UTF-8"&gt; </code><br>
+            <code>&lt;meta name="description" content="Описание страницы"&gt; </code><br>
+            <code>&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt; </code><br>
+        </div>
+
+        <h2>4.<strong><code> &lt;<span class="span">title</span>&gt; </code></strong></h2>
+
+        <li> <strong>Для чего нужен:</strong> Задает заголовок страницы, который отображается в заголовке вкладки
+            браузера и в результатах поиска.</li><br>
+        <li><strong>Пример:</strong> </li><br>
+        <div class="ramka">
+            <br>
+            <code>&lt;title&gt; </code> Моя первая страница<code>&lt;/title&gt; </code>
+            <br><br>
+        </div>
+
+        <h2>5.<strong><code> &lt;<span class="span">link</span>&gt; </code></strong></h2>
+
+        <li> <strong>Для чего нужен:</strong> Используется для подключения внешних ресурсов, таких как CSS-файлы, иконки
+            и шрифты.</li>
+        <li><strong>Пример:</strong> </li><br>
+        <div class="ramka">
+            <code>&lt;link rel="stylesheet" href="styles.css"&gt; </code><br>
+            <code>&lt;link rel="icon" href="favicon.ico"&gt; </code><br>
+        </div>
+
+        <h2>6.<strong><code> &lt;<span class="span">body</span>&gt; </code></strong></h2>
+
+        <li> <strong>Для чего нужен:</strong> Содержит основное содержимое страницы, которое отображается в браузере
+            (текст, изображения, ссылки и т.д.).</li>
+        <li><strong>Пример:</strong> </li><br>
+
+        <div class="ramka">
+            <code>&lt;body&gt; </code><br>
+            <code>&lt;h1&gt; </code><br>Привет мир!<code>&lt;/h1&gt; </code><br>
+            <code>&lt;p&gt; </code>Это моя первая страница<code>&lt;/p&gt; </code><br>
+            <code>&lt;/body&gt; </code><br>
+        </div>
+        <br>
+        <strong>Итог:</strong>
+        <ul>
+            <li><strong><code> &lt;<span class="span">html</span>&gt; </code></strong> - корневой элемент документа.
+            </li>
+            <li><strong><code> &lt;<span class="span">head</span>&gt; </code></strong> - метаинформация о странице.</li>
+            <li><strong><code> &lt;<span class="span">meta</span>&gt; </code></strong> — дополнительные настройки и
+                данные.</li>
+            <li><strong><code> &lt;<span class="span">title</span>&gt; </code></strong> — заголовок страницы.</li>
+            <li><strong><code> &lt;<span class="span">link</span>&gt; </code></strong> — подключение внешних ресурсов.
+            </li>
+            <li><strong><code> &lt;<span class="span">body</span>&gt; </code></strong> — содержимое, которое видит
+                пользователь.</li>
+        </ul>
+        <br>
+        <p>Эти теги формируют основу любого HTML-документа.</p>
+        <p><strong>Просто переходите на следующий шаг, чтобы наглядно посмотреть всё это в работе на реальном
+                примере.</strong></p>
+        <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <br><br><br><br><br><br>
+    </div>
+</body>
+
+</html>

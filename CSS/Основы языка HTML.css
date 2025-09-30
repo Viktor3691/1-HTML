@@ -1,0 +1,52 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.body {
+  background-color: rgb(8, 97, 67);
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+  font: 1em/1.5 sans-serif;
+}
+h1,
+h2 {
+  color: rgb(116, 17, 17);
+}
+
+p {
+  width: 1140px;
+  margin: 0 auto;
+}
+code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+}
+.span {
+  background-color: rgb(209, 234, 235);
+  font-size: 16px;
+}
+.ramka {
+  font-size: 16px;
+  background-color: rgb(235, 241, 245);
+  color: #000;
+  font-family: "Courier New", Courier, monospace;
+  width: 800px;
+}
+.primer {
+  margin: 0;
+  font-size: 16px;
+  background-color: rgb(198, 241, 223);
+  color: #000;
+  font-family: "Courier New", Courier, monospace;
+  width: 800px;
+}
+span {
+  color: rgb(204, 18, 18);
+  font-size: 18px;
+}
+.color_1 {
+  background-color: rgba(255, 0, 255, 0.5);
+}

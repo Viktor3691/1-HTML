@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы языка HTML</title>
+    <link rel="stylesheet" href="../CSS/Основы языка HTML.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="1.1 Введение.html">1</a>
+        <a href="1.2 Браузер и редактор.html">2</a>
+        <a href="1.3 Первые HTML теги.html">3</a>
+        <a href="1.4 Путь к файлу.html">4</a>
+        <a href="1.5 Списки и ссылки.html">5</a>
+        <a href="1.6 Таблицы.html">6</a>
+        <a href="1.7 Работа с текстом.html">7</a>
+        <a href="1.8 Формы.html">8</a>
+        <a href="1.9 Атрибуты тегов.html">9</a>
+        <a href="1.10 Цвет RGB и символы.html">10</a>
+        <a href="1.11 Тест по HTML, Часть 1.html">11</a>
+        <a href="1.12 Итоги модуля.html">12</a>
+
+        <h1>1.8 Формы</h1>
+
+        <p>Тег &lt;<span>form</span>&gt; добавляет на страницу форму, которую пользователь может заполнить. Например,
+            ввести своё имя, фамилию или почту. Данные формы отправляются на сервер. <br>
+            Сайты используют формы, чтобы получить какую-то информацию от пользователя. Это может быть форма заказа в
+            онлайн-магазине или форма обратной связи. Пользователь заполняет поля или выбирает нужную опцию в списке, а
+            после
+            отправки формы эти данные можно обработать.</p>
+        <br>
+        <img src="../IMG/6.png" alt="6">
+        <br><br>
+        <p>Формы в HTML используются для отправки данных на сервер или для получения данных от пользователя. Основной
+            тег —&lt; <span>form</span>&gt;, внутри которого размещаются элементы ввода, такие как <strong>&lt;input
+                &gt;, &lt; textarea&gt;, &lt; select&gt;</strong>
+            и другие. Формы могут передавать данные методами <strong> GET</strong> или <strong>POST</strong> .
+            Они необходимы для взаимодействия пользователя с веб-приложениями, например, для регистрации, авторизации,
+            отправки сообщений или заполнения опросов.
+        </p>
+        <br>
+        <p>Стилизовать &lt;form&gt; можно с помощью CSS. На странице можно сделать сколько угодно форм. Но одновременно
+            пользователь сможет отправить только одну заполненную
+            форму.</p>
+        <br>
+        <p>В теге <strong> &lt;<span>form</span> &gt;</strong> атрибут <strong>method</strong> определяет, каким
+            способом данные
+            будут отправлены на сервер. Он может принимать два основных значения:</p>
+        <ul>
+            &nbsp &nbsp<li><span>GET</span> — Используется для запроса данных с сервера. Данные передаются через
+                URL-адрес в виде параметров запроса. <br>
+                <p><strong>Особенности:</strong>
+                <ul>
+                    &nbsp &nbsp<li>- Данные видны в URL, что может быть рискованно для передачи конфиденциальной
+                        информации (например, паролей)..</li>
+                    &nbsp &nbsp<li> - Есть ограничение на длину URL — обычно около 2000 символов.</li>
+                    &nbsp &nbsp<li> - Результаты GET-запросов могут быть кэшированы браузерами и прокси-серверами</li>
+
+                </ul><br>
+                <strong>Примеры использования:</strong>
+                <ul>
+                    &nbsp &nbsp<li>загрузка веб-страницы — браузер отправляет GET-запрос, чтобы получить HTML-код
+                        страницы;</li>
+                    &nbsp &nbsp<li>отправка данных формы — поиск информации — при вводе поискового запроса браузер
+                        формирует новый GET-запрос с параметрами поиска, а потом
+                        отправляет его на сервер.</li>
+                </ul>
+                </p>
+            </li>
+            <br>
+            <div class="ramka">
+                &lt;form action="" method="get" &gt; <br>
+                &lt;p &gt; <br>
+                &lt; label for="name"&gt;Введите имя:&lt;/label &gt; <br>
+                &lt;input type="text" name="name" id="name" required &gt;<br>
+                &lt;/p &gt;<br>
+                &lt;p &gt;<br>
+                &lt; label for="email"&gt;Введите email:&lt;/label &gt;<br>
+                &lt; input type="email" name="email" id="email" required&gt;<br>
+                &lt;/p &gt;<br>
+                &lt;button type="submit"&gt;Отправить&lt; /button&gt;<br>
+                &lt;/form &gt;<br>
+            </div>
+
+            <hr>
+            <form action="" method="get">
+                <p>
+                    <label for="name">Введите имя:</label>
+                    <input type="text" name="name" id="name" required>
+                </p>
+                <p>
+                    <label for="email">Введите email:</label>
+                    <input type="email" name="email" id="email" required>
+                </p>
+                <button type="submit">Отправить</button>
+            </form>
+
+            <hr>
+
+            <p>Никогда не используйте method="get", если хочется отправить конфиденциальные данные, потому что их можно
+                будет легко
+                прочитать в запросе, который отправляет форма, и даже в адресной строке браузера.
+                <br>
+                💡 Вариант method="get" удобен тем, что полученный URL с ответами можно сохранить в закладки. Например,
+                пользователь
+                может заполнить форму и поделиться ссылкой с результатами с кем-нибудь ещё.
+            </p>
+
+
+            &nbsp &nbsp<li> <span>POST</span> — Применяется для отправки данных на сервер для обработки или сохранения.
+                Данные передаются в теле HTTP-запроса, а не через URL. <br>
+                <strong>Особенности:</strong>
+                <ul>
+                    &nbsp &nbsp<li>- Нет ограничений по объёму информации (в рамках настроек сервера).</li>
+                    &nbsp &nbsp<li>- Данные передаются скрыто от пользователя.</li>
+                    &nbsp &nbsp<li>- Результаты POST-запросов не могут быть кэшированы браузерами и прокси-серверами.
+                    </li>
+                </ul>
+                <br>
+                <strong>Примеры использования:</strong>
+                <ul>
+                    &nbsp &nbsp<li> отправка форм, регистраций, входа в систему;</li>
+                    &nbsp &nbsp<li> загрузка файлов;</li>
+                    &nbsp &nbsp<li> работа с API (Application Programming Interface), где приложения обмениваются
+                        данными друг с другом.</li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+
+
+
+        &lt; &gt;
+
+
+
+
+
+        <p>Кроме этого HTML тег <span>form</span> представляет собой контейнер для других элементов управления. Ниже
+            приведен их
+            перечень:</p>
+        <ul>
+            &nbsp &nbsp<li><strong>action</strong> — здесь указывается ссылка на скрипт, который обработает форму. Это
+                может быть полная URL-ссылка, а может
+                быть относительная, типа html/sendform. Если не указать атрибут action, то страница будет просто
+                обновляться каждый раз, когда отправляется форма.
+            </li>
+            &nbsp &nbsp<li><strong>enctype</strong> — определяет тип кодирования данных формы. Обычно используется для
+                загрузки файлов</li>
+            &nbsp &nbsp<li><strong>method</strong> — определяет метод передачи данных формы. Обычно используется для
+                загрузки файлов</li>
+            &nbsp &nbsp<li><strong>name</strong> — определяет имя формы, которое будет использоваться для идентификации
+                формы на сервере.</li>
+            &nbsp &nbsp<li><strong>target</strong> — определяет целевую область для отображения результата отправки
+                формы.</li>
+            &nbsp &nbsp<li><strong>accept-charset</strong> — определяет набор символов, которые будут использоваться для
+                кодирования данных формы.</li>
+            &nbsp &nbsp<li><strong>autocomplete</strong> — определяет поведение автозаполнения формы.</li>
+            &nbsp &nbsp<li><strong>novalidate</strong> — отключает проверку формы.</li>
+            &nbsp &nbsp<li><strong>rel</strong> — определяет отношение между формой и ресурсом.</li>
+            &nbsp &nbsp<li><strong>rev</strong> — определяет обратное отношение между формой и ресурсом.</li>
+            &nbsp &nbsp<li><strong>enctype</strong> — определяет тип кодирования данных формы.</li>
+            &nbsp &nbsp<li><strong>accept</strong> — определяет типы файлов, которые могут быть загружены.</li>
+            &nbsp &nbsp<li><strong>autocomplete</strong> — определяет поведение автозаполнения формы.</li>
+        </ul>
+        <br>
+        <hr>
+        <p><span>&lt; input&gt;</span> — тег для создания различных полей ввода: текста, пароля, чекбоксов,
+            радио-кнопок, кнопок и других.</p>
+        <br>
+        <p>Тип <span>password</span> для тега <span>&lt;input&gt;</span> используется для создания поля ввода пароля и
+            указывается в
+            атрибуте <span>type.</span> При вводе
+            символов они заменяются точками или звездочками, чтобы скрыть их от посторонних глаз.</p>
+        <p>Другие типы:</p>
+        <ul>
+            &nbsp &nbsp<li><strong>text</strong> — поле ввода текста.</li>
+            &nbsp &nbsp<li><strong>checkbox</strong> — чекбокс.</li>
+            &nbsp &nbsp<li><strong>radio</strong> — радио-кнопка.</li>
+            &nbsp &nbsp<li><strong>button</strong> — кнопка.</li>
+            &nbsp &nbsp<li><strong>image</strong> — изображение.</li>
+            &nbsp &nbsp<li><strong>submit</strong> — кнопка отправки данных.</li>
+            &nbsp &nbsp<li><strong>reset</strong> — кнопка сброса данных.</li>
+            &nbsp &nbsp<li><strong>file</strong> — поле для загрузки файлов.</li>
+            &nbsp &nbsp<li><strong>hidden</strong> — скрытое поле.</li>
+            &nbsp &nbsp<li><strong>color</strong> — поле для выбора цвета.</li>
+            &nbsp &nbsp<li><strong>date</strong> — поле для ввода даты.</li>
+            &nbsp &nbsp<li><strong>datetime-local</strong> — поле для ввода даты и времени.</li>
+            &nbsp &nbsp<li><strong>email</strong> — поле для ввода адреса электронной почты.</li>
+            &nbsp &nbsp<li><strong>month</strong> — поле для ввода месяца.</li>
+            &nbsp &nbsp<li><strong>number</strong> — поле для ввода числа.</li>
+            &nbsp &nbsp<li><strong>range</strong> — поле для ввода диапазона.</li>
+            &nbsp &nbsp<li><strong>search</strong> — поле для поиска.</li>
+            &nbsp &nbsp<li><strong>tel</strong> — поле для ввода телефона.</li>
+            &nbsp &nbsp<li><strong>time</strong> — поле для ввода времени.</li>
+            &nbsp &nbsp<li><strong>url</strong> — поле для ввода URL-адреса.</li>
+            &nbsp &nbsp<li><strong>week</strong> — поле для ввода недели.</li>
+            &nbsp &nbsp<li><strong>textarea</strong> — поле для ввода многострочного текста.</li>
+            &nbsp &nbsp<li><strong>select</strong> — поле для выбора из списка.</li>
+            &nbsp &nbsp<li><strong>option</strong> — элемент списка.</li>
+            &nbsp &nbsp<li><strong>optgroup</strong> — группа элементов списка.</li>
+            &nbsp &nbsp<li><strong>label</strong> — метка для поля ввода.</li>
+            &nbsp &nbsp<li><strong>datalist</strong> — поле для ввода данных из предопределенного списка.</li>
+            &nbsp &nbsp<li><strong>progress</strong> — индикатор прогресса.</li>
+            &nbsp &nbsp<li><strong>meter</strong> — индикатор уровня.</li>
+            &nbsp &nbsp<li><strong>fieldset</strong> — группа полей ввода.</li>
+            &nbsp &nbsp<li><strong>legend</strong> — заголовок группы полей ввода.</li>
+            &nbsp &nbsp<li><strong>output</strong> — поле вывода данных.</li>
+            &nbsp &nbsp<li><strong>details</strong> — детали.</li>
+            &nbsp &nbsp<li><strong>summary</strong> — краткое описание деталей.</li>
+            &nbsp &nbsp<li><strong>dialog</strong> — диалоговое окно.</li>
+            &nbsp &nbsp<li><strong>command</strong> — команда.</li>
+            &nbsp &nbsp<li><strong>canvas</strong> — область для рисования.</li>
+            &nbsp &nbsp<li><strong>iframe</strong> — фрейм.</li>
+            &nbsp &nbsp<li><strong>embed</strong> — встроенный объект.</li>
+            &nbsp &nbsp<li><strong>object</strong> — объект.</li>
+            &nbsp &nbsp<li><strong>param</strong> — параметр объекта.</li>
+            &nbsp &nbsp<li><strong>video</strong> — видео.</li>
+            &nbsp &nbsp<li><strong>audio</strong> — аудио.</li>
+            &nbsp &nbsp<li><strong>source</strong> — источник для видео или аудио.</li>
+            &nbsp &nbsp<li><strong>track</strong> — трек для видео.</li>
+            &nbsp &nbsp<li><strong>keygen</strong> — генератор ключей.</li>
+        </ul>
+        <br>
+        <hr>
+        <p><span>&lt; button&gt;</span> — создает кликабельную кнопку, которая может использоваться для отправки формы
+            или выполнения действий.</p>
+        <ul>
+            &nbsp &nbsp<li><strong>disabled</strong> — отключает кнопку. Она становится серой и не реагирует на действия
+                пользователя.</li>
+            <hr>
+        </ul>
+        <p><span>&lt; textarea&gt;</span>— многострочное текстовое поле для ввода длинного текста. </p>
+        <ul>
+            &nbsp &nbsp<li><strong>maxlength</strong> — задает максимальное количество символов, которое пользователь
+                может ввести в поле &lt; textarea&gt;. Если пользователь попытается ввести больше символов, ввод будет
+                ограничен.</li>
+            &nbsp &nbsp<li><strong>name</strong> — имя поля ввода.</li>
+            &nbsp &nbsp<li><strong>placeholder</strong> — текст, который будет отображаться в поле при его отсутствии.
+            </li>
+            &nbsp &nbsp<li><strong>cols</strong> — определяет количество столбцов в текстовом поле.</li>
+            &nbsp &nbsp<li><strong>rows</strong> — определяет количество строк в текстовом поле.</li>
+            &nbsp &nbsp<li><strong>readonly</strong> — делает текстовое поле только для чтения.</li>
+            &nbsp &nbsp<li><strong>disabled</strong> — отключает текстовое поле. </li>
+
+
+        </ul>
+
+
+
+
+
+
+
+
+        &lt; &gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <br><br><br><br><br><br>
+
+</body>
+
+</html>
